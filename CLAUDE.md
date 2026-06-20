@@ -130,6 +130,22 @@ Detalle técnico completo de cada ataque (cómo funciona y cómo se previene) es
 en `inf/guia_ataques_dvwa.md`. Úsalo como fuente, pero **redacta con lenguaje
 sencillo** para el cliente.
 
+### Puntajes CVSS v3.1 (confirmados por el usuario en la calculadora oficial)
+
+Estos son los puntajes oficiales obtenidos en https://www.first.org/cvss/calculator/3.1
+y verificados por el usuario. **Usar estos valores** al redactar `02`, `03` y `04`
+(no recalcular ni inventar otros):
+
+| Ataque | Vector CVSS | Puntaje | Severidad |
+|--------|-------------|---------|-----------|
+| **Inyección SQL** | `AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H` | **9.8** | Crítica 🟥 |
+| **XSS (Reflejado)** | `AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N` | **6.1** | Media 🟧 |
+| **Inyección de comandos** | `AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H` | **10.0** | Crítica 🟥 |
+
+> Estos puntajes ya guían también la matriz de riesgo (`06`): a mayor CVSS, mayor
+> probabilidad/impacto. Si el usuario cambia algún valor en la calculadora, debe
+> avisar para actualizar esta tabla.
+
 ---
 
 ## 7. Conceptos clave para escribir el informe
