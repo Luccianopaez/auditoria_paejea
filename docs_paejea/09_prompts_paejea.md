@@ -29,3 +29,10 @@ Necesito realizar la documentacion para una
 # Resultado calculadora  CVSS
 
  Hice el calculo de cada ataque en CVSS 3.1 Calculator, estos son los resultados e incluyelos en CLAUDE.md para luego tenerlos a mano al crear la documentacion, SQL : 9.8, XSS(Reflejado) : 6.1, Comandos : 10.0
+
+# Creacion de 02_sqli_paejea.md
+ realiza la el @docs_paejea/02_sqli_paejea.md , en @docs_paejea/img_paejea/sqli_paejea.png esta la captura del ataque, en @inf/instrucciones_evaluacion03.md tienes las instrucciones de la evaluacion , siguelas paso a paso sin inventar informacion sin preguntarme, se claro, en @CLAUDE.md estan las reglas mas claras
+
+# Creacion de componentes y archivos vacios
+
+ crea los componentes solicitados en @inf/instrucciones_evaluacion03.md , los mismos nombres que se soliitan en la evaluacion, no los rellenes, solo crea los archivos sin nada dentro.
