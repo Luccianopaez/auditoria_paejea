@@ -17,12 +17,12 @@ campo debería servir solo para saludar: si escribes *Pedro*, la página respond
 En lugar de un nombre, escribimos esto:
 
 ```
-<script>alert('XSS')</script>
+<script>alert('Jean')</script>
 ```
 
 Al pulsar **Submit**, la página no nos saludó con ese texto: el navegador
 **ejecutó el código** y mostró una ventana emergente (un *pop-up*) con la palabra
-"XSS". Eso demuestra que pudimos meter instrucciones que el navegador obedeció.
+"Jean". Eso demuestra que pudimos meter instrucciones que el navegador obedeció.
 
 ![XSS reflejado](img_paejea/xss_paejea.png)
 
@@ -45,7 +45,7 @@ navegador no lo entiende como un nombre escrito en pantalla, sino como una
 **instrucción que debe ejecutar**. Y la ejecuta.
 
 - Si escribes *Pedro* → la página muestra el texto **"Hello Pedro"**.
-- Si escribes `<script>alert('XSS')</script>` → el navegador **ejecuta** ese
+- Si escribes `<script>alert('Jean')</script>` → el navegador **ejecuta** ese
   código y abre la ventana emergente.
 
 > **La analogía:** es como un cartel donde la gente escribe su nombre para
@@ -106,7 +106,7 @@ encoding*). Suena técnico, pero la idea es sencilla:
   **convertir los símbolos especiales en texto inofensivo**. Por ejemplo, el
   símbolo `<` se reemplaza por un código (`&lt;`) que el navegador **muestra como
   texto**, en lugar de interpretarlo como el inicio de una instrucción.
-- Así, si alguien escribe `<script>alert('XSS')</script>`, en pantalla aparece
+- Así, si alguien escribe `<script>alert('Jean')</script>`, en pantalla aparece
   ese texto **escrito literalmente**, como si fuera un nombre raro, y el navegador
   **no lo ejecuta**.
 

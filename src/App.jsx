@@ -13,13 +13,14 @@ import {
 } from 'lucide-react'
 import Resumen from './components/Resumen.jsx'
 import InyeccionSQL from './components/InyeccionSQL.jsx'
+import XSS from './components/XSS.jsx'
 
 // Cada sección apunta a su componente. Las que aún no se construyen quedan
 // con componente `null` y muestran un aviso temporal.
 const SECCIONES = [
   { id: '01', titulo: 'Resumen', icono: Building2, Componente: Resumen },
   { id: '02', titulo: 'Inyección SQL', icono: Database, Componente: InyeccionSQL },
-  { id: '03', titulo: 'XSS', icono: Code2, Componente: null },
+  { id: '03', titulo: 'XSS', icono: Code2, Componente: XSS },
   { id: '04', titulo: 'Inyección de comandos', icono: Terminal, Componente: null },
   { id: '05', titulo: 'Activos', icono: Boxes, Componente: null },
   { id: '06', titulo: 'Matriz de riesgo', icono: Grid3x3, Componente: null },
