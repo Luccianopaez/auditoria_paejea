@@ -64,3 +64,6 @@ Necesito realizar la documentacion para una
 
 # Estructura base de la web + componente Resumen
  empieza con la pagina web, instala tailwind, react-markdown y lucide-react, arma el App.jsx con un menu de navegacion para las 9 secciones y un lector que muestre los markdown de @docs_paejea/ tal cual sin inventar nada, y crea el primer componente Resumen.jsx que muestre el @docs_paejea/01_resumen_paejea.md, en @CLAUDE.md estan las reglas
+
+# Componente InyeccionSQL (02)
+ crea el componente InyeccionSQL.jsx que muestre el @docs_paejea/02_sqli_paejea.md con su captura sqli_paejea.png incrustada, conectalo en el App.jsx, usa el lector de markdown que ya armamos sin inventar nada, en @CLAUDE.md estan las reglas
