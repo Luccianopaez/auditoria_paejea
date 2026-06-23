@@ -16,6 +16,7 @@ import InyeccionSQL from './components/InyeccionSQL.jsx'
 import XSS from './components/XSS.jsx'
 import Comandos from './components/Comandos.jsx'
 import Activos from './components/Activos.jsx'
+import Matriz from './components/Matriz.jsx'
 
 // Cada sección apunta a su componente. Las que aún no se construyen quedan
 // con componente `null` y muestran un aviso temporal.
@@ -25,7 +26,7 @@ const SECCIONES = [
   { id: '03', titulo: 'XSS', icono: Code2, Componente: XSS },
   { id: '04', titulo: 'Inyección de comandos', icono: Terminal, Componente: Comandos },
   { id: '05', titulo: 'Activos', icono: Boxes, Componente: Activos },
-  { id: '06', titulo: 'Matriz de riesgo', icono: Grid3x3, Componente: null },
+  { id: '06', titulo: 'Matriz de riesgo', icono: Grid3x3, Componente: Matriz },
   { id: '07', titulo: 'Controles', icono: ShieldCheck, Componente: null },
   { id: '08', titulo: 'Recuperación', icono: LifeBuoy, Componente: null },
   { id: '09', titulo: 'Bitácora de IA', icono: Bot, Componente: null },

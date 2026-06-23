@@ -76,3 +76,6 @@ Necesito realizar la documentacion para una
 
 # Componente Activos (05)
  crea el componente Activos.jsx que muestre el @docs_paejea/05_activos_paejea.md, conectalo en el App.jsx, usa el lector de markdown que ya armamos sin inventar nada, en @CLAUDE.md estan las reglas
+
+# Componente Matriz (06)
+ crea el componente Matriz.jsx que muestre el @docs_paejea/06_matriz_paejea.md con su matriz de riesgo y mapa de calor, conectalo en el App.jsx, usa el lector de markdown que ya armamos sin inventar nada, en @CLAUDE.md estan las reglas
