@@ -36,3 +36,22 @@ Necesito realizar la documentacion para una
 # Creacion de componentes y archivos vacios
 
  crea los componentes solicitados en @inf/instrucciones_evaluacion03.md , los mismos nombres que se soliitan en la evaluacion, no los rellenes, solo crea los archivos sin nada dentro.
+
+# Cambiar la base del proyecto TS a JS
+
+ La evaluacion solicita explicitamente que sea en Js, actualmente se esta usando TS, migrala a Js.
+
+ # Redactar @03_xss_paejea.md
+
+ redacta el @docs_paejea/03_xss_paejea.md, lo mismo que @docs_paejea/02_sqli_paejea.md en temas de instrucciones, @docs_paejea/img_paejea/xss_paejea.png , la evidencia
+
+# Redactar @04_comandos_paejea.md
+
+  realiza el @docs_paejea/04_comandos_paejea.md , en @docs_paejea/img_paejea/comandos_paejea.png esta la captura del ataque, en @inf/instrucciones_evaluacion03.md tienes las instrucciones de la evaluacion , siguelas paso a paso sin inventar informacion sin preguntarme, se claro, en @CLAUDE.md estan las reglas mas claras. Mantene la misma estructura que @docs_paejea/03_xss_paejea.md y @docs_paejea/02_sqli_paejea.md
+
+# Redactar @05_activos_paejea.md
+
+  realiza el @docs_paejea/05_activos_paejea.md , los activos de informacion de VetAmigos y sus riesgos segun el rubro, usa de base @docs_paejea/01_resumen_paejea.md y los ataques 02, 03 y 04 , en @inf/instrucciones_evaluacion03.md tienes las instrucciones de la evaluacion , siguelas paso a paso sin inventar informacion sin preguntarme, se claro, en @CLAUDE.md estan las reglas mas claras
+
+# Redactar @06_matriz_paejea.md
+ realiza el @docs_paejea/06_matriz_paejea.md , la matriz de riesgo (probabilidad × impacto) con su mapa de calor, usa de base los activos del @docs_paejea/05_activos_paejea.md y los tres ataques 02, 03 y 04 con sus puntajes CVSS, ordena las fallas de la mas urgente a la menos urgente, en @inf/instrucciones_evaluacion03.md tienes las instrucciones de la evaluacion , siguelas paso a paso sin inventar informacion sin preguntarme, se claro, en @CLAUDE.md estan las reglas mas claras
