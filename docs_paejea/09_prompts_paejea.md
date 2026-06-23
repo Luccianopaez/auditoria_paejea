@@ -55,3 +55,6 @@ Necesito realizar la documentacion para una
 
 # Redactar @06_matriz_paejea.md
  realiza el @docs_paejea/06_matriz_paejea.md , la matriz de riesgo (probabilidad × impacto) con su mapa de calor, usa de base los activos del @docs_paejea/05_activos_paejea.md y los tres ataques 02, 03 y 04 con sus puntajes CVSS, ordena las fallas de la mas urgente a la menos urgente, en @inf/instrucciones_evaluacion03.md tienes las instrucciones de la evaluacion , siguelas paso a paso sin inventar informacion sin preguntarme, se claro, en @CLAUDE.md estan las reglas mas claras
+
+# Redactar @07_controles_paejea.md
+ realiza el @docs_paejea/07_controles_paejea.md, las politicas de prevencion y los controles de mitigacion para cada falla, usa de base el orden de prioridad del @docs_paejea/06_matriz_paejea.md y las defensas ya escritas en los ataques 02, 03 y 04, en @inf/instrucciones_evaluacion03.md tienes las instrucciones de la evaluacion, siguelas paso a paso sin inventar informacion sin preguntarme, se claro, en @CLAUDE.md estan las reglas mas claras
