@@ -1,4 +1,4 @@
-# VetAmigos — La empresa y su portal de clientes
+# VetAmigos 
 
 ## ¿Quiénes son VetAmigos?
 
