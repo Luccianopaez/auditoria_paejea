@@ -135,10 +135,21 @@ export default function App() {
         </nav>
 
         {/* Footer */}
-        <div className="border-t border-white/8 px-5 py-4">
+        <div className="border-t border-white/8 px-5 py-4 space-y-2">
           <div className="flex items-center gap-2">
             <ShieldAlert className="h-3.5 w-3.5 flex-shrink-0 text-teal-600" />
             <p className="text-[11px] text-teal-600">Empresa ficticia · Entorno controlado</p>
+          </div>
+          <div>
+            <p className="text-[10px] text-teal-700">Desarrollado por</p>
+            <a
+              href="https://github.com/Luccianopaez"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[12px] font-medium text-teal-300 hover:text-white transition-colors"
+            >
+              github.com/Luccianopaez
+            </a>
           </div>
         </div>
       </aside>
