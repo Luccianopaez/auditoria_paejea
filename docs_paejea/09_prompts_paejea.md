@@ -73,3 +73,6 @@ Necesito realizar la documentacion para una
 
 # Componente Comandos (04)
  crea el componente Comandos.jsx que muestre el @docs_paejea/04_comandos_paejea.md con su captura comandos_paejea.png incrustada, conectalo en el App.jsx, usa el lector de markdown que ya armamos sin inventar nada, en @CLAUDE.md estan las reglas
+
+# Componente Activos (05)
+ crea el componente Activos.jsx que muestre el @docs_paejea/05_activos_paejea.md, conectalo en el App.jsx, usa el lector de markdown que ya armamos sin inventar nada, en @CLAUDE.md estan las reglas
