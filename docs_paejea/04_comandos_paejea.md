@@ -78,20 +78,30 @@ https://www.first.org/cvss/calculator/3.1).
 | **Severidad** | **Crítica** 🟥 |
 | **Vector** | `AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H` |
 
-¿Por qué la nota máxima? En palabras simples:
+**¿Por qué exactamente 10.0, la nota máxima posible?**
 
-- **Se ataca por internet**, sin estar físicamente en el lugar.
-- **Es fácil de hacer:** basta con escribir una frase corta, sin herramientas
-  especiales.
-- **No hace falta tener cuenta ni contraseña** para lograrlo.
-- **El daño salta de la aplicación al servidor completo:** el atacante deja de
-  estar limitado al portal y pasa a controlar la máquina donde vive todo. Por eso
-  compromete los tres pilares al máximo: puede **ver** todo (confidencialidad),
-  **cambiar o borrar** todo (integridad) y **apagar el servicio** (disponibilidad).
+El puntaje sale de evaluar siete factores. La inyección de comandos los
+maximiza todos sin excepción:
 
-Por eso recibe la nota más alta posible. Para VetAmigos significa que esta falla,
-junto con la inyección SQL, es de las **primeras a corregir**: pone en riesgo no
-solo la base de clientes, mascotas y pagos, sino el servidor entero del negocio.
+| Factor | Calificación | Lo que significa para VetAmigos |
+|--------|--------------|---------------------------------|
+| Acceso (¿desde dónde se ataca?) | Por internet | Cualquier persona del mundo puede intentarlo sin poner un pie en el local |
+| Dificultad (¿qué tan difícil es?) | Muy baja | Una sola frase corta basta; no se necesitan herramientas especiales |
+| Credenciales (¿necesita cuenta?) | No | No hace falta ser cliente de VetAmigos ni tener contraseña |
+| Interacción (¿necesita a alguien?) | No | Funciona solo, sin depender de que ningún cliente cometa un error |
+| **Alcance (¿hasta dónde llega el daño?)** | **Rompe los límites del portal** | **Aquí está la diferencia con la inyección SQL:** el atacante ya no solo lee datos del portal; pasa a controlar la máquina entera donde vive VetAmigos |
+| Confidencialidad + Integridad + Disponibilidad | **Las tres al máximo** | Puede ver todo, modificar todo y apagar todo el servidor a la vez |
+
+> **¿Por qué llega a 10.0 y la inyección SQL solo a 9.8?** La diferencia está
+> en el alcance: la inyección SQL se queda dentro del portal. La inyección de
+> comandos "rompe la pared" y llega al servidor completo. En términos de
+> VetAmigos: la inyección SQL expone los datos; la inyección de comandos
+> entrega las **llaves de todo el negocio**.
+
+Para VetAmigos, un puntaje de **10.0 significa el peor escenario posible**: no
+solo se roban los datos de clientes, mascotas y tarjetas; un atacante puede
+además borrar todo, instalar programas maliciosos o apagar el portal
+permanentemente.
 
 ---
 

@@ -78,20 +78,30 @@ https://www.first.org/cvss/calculator/3.1).
 | **Severidad** | **Media** 🟧 |
 | **Vector** | `AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N` |
 
-¿Por qué un puntaje medio y no tan alto como la inyección SQL? En palabras
-simples:
+**¿Por qué "solo" 6.1?**
 
-- **Se ataca por internet** y **es fácil de hacer**, igual que el anterior.
-- **No hace falta tener cuenta** para preparar el ataque.
-- **PERO necesita que la víctima haga algo** (hacer clic en un enlace trampa). No
-  se dispara solo; depende de engañar a una persona. Eso baja la nota.
-- **El daño directo es menor:** afecta sobre todo a **un** usuario por vez, no a
-  toda la base de datos de golpe. Por eso el impacto en confidencialidad e
-  integridad se considera "bajo".
+El puntaje sale de evaluar siete factores. Comparado con los otros dos ataques,
+hay **dos diferencias clave** que bajan la nota:
+
+| Factor | Calificación | Lo que significa para VetAmigos |
+|--------|--------------|---------------------------------|
+| Acceso (¿desde dónde se ataca?) | Por internet | El enlace trampa puede enviarse desde cualquier lugar del mundo |
+| Dificultad (¿qué tan difícil es?) | Baja | Crear el enlace malicioso no requiere conocimientos avanzados |
+| Credenciales (¿necesita cuenta?) | No | No hace falta registrarse en VetAmigos para preparar el ataque |
+| **Interacción (¿necesita a alguien?)** | **Sí — la víctima debe hacer clic** | **Primera diferencia que baja el puntaje:** si el cliente no hace clic en el enlace trampa, el ataque no ocurre |
+| Alcance (¿hasta dónde llega?) | Sale del portal al navegador | El código malicioso actúa en el navegador del cliente, no en el servidor |
+| **Confidencialidad + Integridad** | **Bajos** | **Segunda diferencia:** solo afecta a un cliente por vez, no a toda la base de VetAmigos |
+| Disponibilidad (¿puede tumbar el sitio?) | No | El portal sigue funcionando para todos los demás clientes |
+
+> **En una frase:** el XSS necesita un **cómplice involuntario**. El atacante
+> debe convencer a un cliente de VetAmigos de hacer clic en un enlace sospechoso
+> (por correo, WhatsApp o redes sociales). Si nadie cae, el ataque no ocurre.
+> Eso lo diferencia de la inyección SQL y la de comandos, que funcionan solas,
+> en cualquier momento y sin depender de nadie.
 
 Aun siendo "Media", para VetAmigos no es algo que se pueda ignorar: un atacante
-podría usarlo para **robar la cuenta de un cliente** y, con ella, ver sus datos
-personales, los de sus mascotas y sus medios de pago.
+podría usarlo para robar la cuenta de un cliente y acceder a sus datos personales,
+la ficha de sus mascotas y sus medios de pago.
 
 ---
 

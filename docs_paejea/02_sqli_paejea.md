@@ -69,19 +69,29 @@ https://www.first.org/cvss/calculator/3.1).
 | **Severidad** | **Crítica** 🟥 |
 | **Vector** | `AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H` |
 
-¿Por qué tan alto? En palabras simples:
+**¿Por qué exactamente 9.8 y no 10.0?**
 
-- **Se ataca por internet**, sin necesidad de estar físicamente en el lugar.
-- **Es fácil de hacer:** basta con escribir una frase corta, no se requieren
-  herramientas especiales.
-- **No hace falta tener cuenta ni contraseña** para lograrlo.
-- **Compromete los tres pilares de la información a la vez:** el atacante puede
-  **ver** datos privados (confidencialidad), **modificarlos o borrarlos**
-  (integridad) y **dejar el sistema inutilizable** (disponibilidad).
+El puntaje sale de evaluar siete factores independientes. Aquí cada uno con lo
+que significa para VetAmigos:
 
-Por eso recibe casi la nota máxima. Para VetAmigos significa que esta falla es la
-**número uno a corregir**: pone en riesgo directo la base completa de clientes,
-fichas de mascotas y medios de pago.
+| Factor | Calificación | Lo que significa para VetAmigos |
+|--------|--------------|---------------------------------|
+| Acceso (¿desde dónde se ataca?) | Por internet | Cualquier persona del mundo puede intentarlo sin poner un pie en el local |
+| Dificultad (¿qué tan difícil es?) | Muy baja | Solo hay que escribir una frase corta en el portal; sin herramientas especiales |
+| Credenciales (¿necesita cuenta?) | No | No hace falta ser cliente de VetAmigos ni tener contraseña |
+| Interacción (¿necesita a alguien?) | No | Funciona solo, sin depender de que ningún cliente cometa un error |
+| Confidencialidad (¿qué datos ve?) | **Todos — impacto alto** | Los ~18.000 clientes, sus fichas de mascotas y sus tarjetas de un solo golpe |
+| Integridad (¿puede modificar datos?) | **Sí — impacto alto** | Podría cambiar o borrar registros de mascotas, datos de clientes o historial de pagos |
+| Disponibilidad (¿puede tumbar el sitio?) | **Sí — impacto alto** | Puede dejar la base de datos inutilizable, cerrando el portal completo |
+
+> **¿Por qué no llega a 10.0?** La única razón es técnica: el ataque queda
+> "contenido" dentro de la aplicación y no da acceso directo al servidor
+> completo. Eso lo hace la inyección de comandos (sección 04). En daño práctico
+> sobre los datos de VetAmigos, la diferencia es casi imperceptible.
+
+Para VetAmigos, un puntaje de **9.8 significa que esta falla es la número uno a
+corregir**: pone en riesgo directo la base completa de clientes, fichas de
+mascotas y medios de pago.
 
 ---
 
