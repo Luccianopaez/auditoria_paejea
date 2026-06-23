@@ -85,3 +85,6 @@ Necesito realizar la documentacion para una
 
 # Componente Recuperacion (08)
  crea el componente Recuperacion.jsx que muestre el @docs_paejea/08_recuperacion_paejea.md, conectalo en el App.jsx, usa el lector de markdown que ya armamos sin inventar nada, en @CLAUDE.md estan las reglas
+
+# Componente Prompts (09)
+ crea el componente Prompts.jsx que muestre el @docs_paejea/09_prompts_paejea.md (la bitacora de IA), conectalo en el App.jsx, usa el lector de markdown que ya armamos sin inventar nada, en @CLAUDE.md estan las reglas
