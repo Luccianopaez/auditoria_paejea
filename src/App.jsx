@@ -18,6 +18,7 @@ import Comandos from './components/Comandos.jsx'
 import Activos from './components/Activos.jsx'
 import Matriz from './components/Matriz.jsx'
 import Controles from './components/Controles.jsx'
+import Recuperacion from './components/Recuperacion.jsx'
 
 // Cada sección apunta a su componente. Las que aún no se construyen quedan
 // con componente `null` y muestran un aviso temporal.
@@ -29,7 +30,7 @@ const SECCIONES = [
   { id: '05', titulo: 'Activos', icono: Boxes, Componente: Activos },
   { id: '06', titulo: 'Matriz de riesgo', icono: Grid3x3, Componente: Matriz },
   { id: '07', titulo: 'Controles', icono: ShieldCheck, Componente: Controles },
-  { id: '08', titulo: 'Recuperación', icono: LifeBuoy, Componente: null },
+  { id: '08', titulo: 'Recuperación', icono: LifeBuoy, Componente: Recuperacion },
   { id: '09', titulo: 'Bitácora de IA', icono: Bot, Componente: null },
 ]
 

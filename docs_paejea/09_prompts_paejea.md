@@ -82,3 +82,6 @@ Necesito realizar la documentacion para una
 
 # Componente Controles (07)
  crea el componente Controles.jsx que muestre el @docs_paejea/07_controles_paejea.md, conectalo en el App.jsx, usa el lector de markdown que ya armamos sin inventar nada, en @CLAUDE.md estan las reglas
+
+# Componente Recuperacion (08)
+ crea el componente Recuperacion.jsx que muestre el @docs_paejea/08_recuperacion_paejea.md, conectalo en el App.jsx, usa el lector de markdown que ya armamos sin inventar nada, en @CLAUDE.md estan las reglas
