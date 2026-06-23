@@ -1,121 +1,88 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import {
+  Building2,
+  Database,
+  Code2,
+  Terminal,
+  Boxes,
+  Grid3x3,
+  ShieldCheck,
+  LifeBuoy,
+  Bot,
+  ShieldAlert,
+} from 'lucide-react'
+import Resumen from './components/Resumen.jsx'
+
+// Cada sección apunta a su componente. Las que aún no se construyen quedan
+// con componente `null` y muestran un aviso temporal.
+const SECCIONES = [
+  { id: '01', titulo: 'Resumen', icono: Building2, Componente: Resumen },
+  { id: '02', titulo: 'Inyección SQL', icono: Database, Componente: null },
+  { id: '03', titulo: 'XSS', icono: Code2, Componente: null },
+  { id: '04', titulo: 'Inyección de comandos', icono: Terminal, Componente: null },
+  { id: '05', titulo: 'Activos', icono: Boxes, Componente: null },
+  { id: '06', titulo: 'Matriz de riesgo', icono: Grid3x3, Componente: null },
+  { id: '07', titulo: 'Controles', icono: ShieldCheck, Componente: null },
+  { id: '08', titulo: 'Recuperación', icono: LifeBuoy, Componente: null },
+  { id: '09', titulo: 'Bitácora de IA', icono: Bot, Componente: null },
+]
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [activa, setActiva] = useState('01')
+  const seccion = SECCIONES.find((s) => s.id === activa)
+  const Componente = seccion.Componente
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+    <div className="min-h-screen bg-slate-50 text-slate-700 md:flex">
+      {/* Menú lateral */}
+      <aside className="bg-violet-900 text-violet-100 md:sticky md:top-0 md:h-screen md:w-72 md:flex-shrink-0 md:overflow-y-auto">
+        <div className="flex items-center gap-2 px-6 py-6">
+          <ShieldAlert className="h-7 w-7 text-violet-300" />
+          <div>
+            <p className="text-lg font-bold leading-tight text-white">VetAmigos</p>
+            <p className="text-xs text-violet-300">Auditoría de seguridad</p>
+          </div>
         </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+        <nav className="px-3 pb-6">
+          {SECCIONES.map((s) => {
+            const Icono = s.icono
+            const esActiva = s.id === activa
+            return (
+              <button
+                key={s.id}
+                type="button"
+                onClick={() => setActiva(s.id)}
+                className={`mb-1 flex w-full items-center gap-3 rounded-lg px-3 py-2 text-left text-sm transition ${
+                  esActiva
+                    ? 'bg-white font-semibold text-violet-900'
+                    : 'text-violet-100 hover:bg-violet-800'
+                }`}
+              >
+                <Icono className="h-4 w-4 flex-shrink-0" />
+                <span>
+                  <span className="mr-1 opacity-60">{s.id}</span>
+                  {s.titulo}
+                </span>
+              </button>
+            )
+          })}
+        </nav>
+      </aside>
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
+      {/* Contenido */}
+      <main className="flex-1">
+        <div className="mx-auto max-w-3xl px-6 py-10">
+          {Componente ? (
+            <Componente />
+          ) : (
+            <div className="rounded-xl border border-dashed border-slate-300 bg-white p-12 text-center text-slate-400">
+              <p className="text-lg font-medium">Sección {seccion.id} en construcción</p>
+              <p className="mt-1 text-sm">Este componente se conectará en el siguiente paso.</p>
+            </div>
+          )}
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+      </main>
+    </div>
   )
 }
 

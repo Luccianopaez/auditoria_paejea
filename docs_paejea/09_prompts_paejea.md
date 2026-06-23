@@ -61,3 +61,6 @@ Necesito realizar la documentacion para una
 
 # Redactar @08_recuperacion_paejea.md
  realiza el @docs_paejea/08_recuperacion_paejea.md, la mejora tecnologica y el plan de recuperacion ante desastres (DR) para VetAmigos, usa de base los ataques 02, 03 y 04, la matriz @docs_paejea/06_matriz_paejea.md y los controles @docs_paejea/07_controles_paejea.md, en @inf/instrucciones_evaluacion03.md tienes las instrucciones de la evaluacion, siguelas paso a paso sin inventar informacion sin preguntarme, se claro, en @CLAUDE.md estan las reglas mas claras
+
+# Estructura base de la web + componente Resumen
+ empieza con la pagina web, instala tailwind, react-markdown y lucide-react, arma el App.jsx con un menu de navegacion para las 9 secciones y un lector que muestre los markdown de @docs_paejea/ tal cual sin inventar nada, y crea el primer componente Resumen.jsx que muestre el @docs_paejea/01_resumen_paejea.md, en @CLAUDE.md estan las reglas
