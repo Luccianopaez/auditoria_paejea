@@ -88,3 +88,6 @@ Necesito realizar la documentacion para una
 
 # Componente Prompts (09)
  crea el componente Prompts.jsx que muestre el @docs_paejea/09_prompts_paejea.md (la bitacora de IA), conectalo en el App.jsx, usa el lector de markdown que ya armamos sin inventar nada, en @CLAUDE.md estan las reglas
+
+# Arreglar el scroll al cambiar de seccion
+ hay un problema de navegacion en la web: si bajo con scroll dentro de una seccion y luego cambio a otra seccion desde el menu, la pagina nueva queda mostrada desde la mitad o el final en vez del inicio. Corrige el App.jsx para que cada vez que se cambia de seccion el scroll vuelva automaticamente al principio del contenido, en @CLAUDE.md estan las reglas

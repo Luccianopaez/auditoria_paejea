@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import {
   Building2,
   Database,
@@ -39,6 +39,12 @@ function App() {
   const [activa, setActiva] = useState('01')
   const seccion = SECCIONES.find((s) => s.id === activa)
   const Componente = seccion.Componente
+
+  // Al cambiar de sección, volver al inicio del contenido (si no, la nueva
+  // sección quedaría mostrada desde donde estaba el scroll de la anterior).
+  useEffect(() => {
+    window.scrollTo({ top: 0 })
+  }, [activa])
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-700 md:flex">
